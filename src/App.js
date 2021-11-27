@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CurrentWeather from "./components/CurrentWeather";
 
-const weatherEndpoint =
+const currentWeatherEndpoint =
   "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=11b0499bd13ab56063de7565a440eb97&units=metric";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await fetch(weatherEndpoint);
+      const res = await fetch(currentWeatherEndpoint);
 
       if (!res.ok) throw new Error("Something went wrong!");
 
