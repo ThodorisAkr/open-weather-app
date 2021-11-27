@@ -1,0 +1,34 @@
+h1 {
+  color: white;
+  padding-top: 30px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: 3rem;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("./media/mobile-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    background-image: url("./media/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .App {
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}
