@@ -32,11 +32,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Open Weather App</h1>
+      <h1>Open Weather</h1>
       <main>
         {error && <p>{error}</p>}
         {loading && <p>Loading...</p>}
         {weather && <CurrentWeather data={weather} />}
+        <p style={{ marginTop: "1rem", paddingTop: "1.5rem" }}>
+          Seven Day Forecast
+        </p>
       </main>
     </div>
   );

@@ -1,0 +1,36 @@
+.display {
+  margin: 1rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  background-color: rgba(169, 170, 170, 0.7);
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 1px;
+  font-size: 0.75rem;
+}
+
+.display:hover {
+  background-color: rgba(169, 170, 170, 1);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  margin-top: 10px;
+}
+
+.gridItem {
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+  .display {
+    margin: 3rem;
+    font-size: 1rem;
+  }
+  .gridItem {
+    height: 100%;
+  }
+}
