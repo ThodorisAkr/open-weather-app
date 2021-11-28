@@ -2,20 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 3rem;
-  border-top: 1px solid black;
+  padding: 0.3rem 2rem;
+  margin: 0.5rem;
   font-weight: bold;
+  box-shadow: 0 0 3px 0;
 }
 
 .item_display:hover {
   cursor: pointer;
   background-color: rgb(196, 196, 196);
+  box-shadow: 0 0 3px 2px;
 }
 
 .day {
   font-size: 1rem;
 }
 
-.max_temp {
+.mean_temp {
   font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .item_display {
+    width: 25%;
+    margin: 0.5rem;
+    justify-content: space-around;
+    box-shadow: 0 0 5px 0;
+  }
 }

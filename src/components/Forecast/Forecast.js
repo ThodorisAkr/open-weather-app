@@ -32,11 +32,13 @@ const Forecast = (props) => {
       )}
       {forecast && !showButton && (
         <div>
-          <div className={classes.grid}>
-            <h2>Next 7 days Max °Deg</h2>
-            {forecast.map((item) => {
-              return <ForecastItem key={item.dt} data={item} />;
-            })}
+          <div className={classes.container}>
+            <h2>Next 7 days Forecast</h2>
+            <div className={classes.grid}>
+              {forecast.map((item) => {
+                return <ForecastItem key={item.dt} data={item} />;
+              })}
+            </div>
           </div>
           <button className={classes.close} onClick={closeForecastHandler}>
             Hide forecast

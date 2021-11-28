@@ -19,6 +19,8 @@ const ForecastItem = (props) => {
   const date = new Date(forecast.dt * 1000);
   const day = weekday[date.getDay()];
 
+  const meanTemp = ((forecast.temp.max + forecast.temp.min) / 2).toFixed(2);
+
   const openDetailsHandler = () => {
     console.log("Modal Opened");
   };
@@ -28,7 +30,7 @@ const ForecastItem = (props) => {
     <div className={classes.item_display} onClick={openDetailsHandler}>
       <div className={classes.day}>{day.substring(0, 3)}</div>
       <img src={iconURL} alt="weather icon" />
-      <div className={classes.max_temp}>{forecast.temp.max}°</div>
+      <div className={classes.mean_temp}>{meanTemp}°</div>
     </div>
   );
 };
