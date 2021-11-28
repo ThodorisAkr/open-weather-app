@@ -8,7 +8,6 @@ const LineChart = (props) => {
   const weatherForecast = props.data;
   const maxTemp = weatherForecast.map((item) => item.temp.max);
   maxTemp.shift();
-  console.log(maxTemp);
   const data = {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [

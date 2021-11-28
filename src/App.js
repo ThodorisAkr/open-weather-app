@@ -3,8 +3,8 @@ import "./App.css";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import Forecast from "./components/Forecast/Forecast";
 import useHttp from "./hooks/use-http";
-import LoadingSpinner from "./UI/LoadingSpinner";
-import Footer from "./UI/Footer";
+import LoadingSpinner from "./components/UI/LoadingSpinner/LoadingSpinner";
+import Footer from "./components/UI/Footer/Footer";
 import LineChart from "./components/LineChart/LineChart";
 
 const currentWeatherEndpoint =
