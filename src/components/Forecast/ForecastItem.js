@@ -34,7 +34,6 @@ const ForecastItem = (props) => {
     setModalOpened(false);
   };
 
-  console.log(forecast);
   return (
     <Fragment>
       {modalOpened && (
