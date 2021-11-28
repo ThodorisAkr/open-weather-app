@@ -25,7 +25,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="background"></div>
       <h1>Open Weather</h1>
       <main>
         {error && <p className="error">{error}</p>}

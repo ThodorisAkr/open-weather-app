@@ -11,6 +11,13 @@
   font-size: 1rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid black;
+}
+
+.button:hover {
+  background-color: #1f1f1f;
+  color: white;
+  cursor: pointer;
 }
 
 .grid {
@@ -18,12 +25,8 @@
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  background-color: rgba(169, 170, 170, 0.7);
-  border-radius: 15px;
-}
-
-.grid:hover {
-  background-color: rgba(169, 170, 170, 1);
+  background-color: white;
+  box-shadow: 0 0 10px 0px;
 }
 
 .grid p {
@@ -33,9 +36,15 @@
 
 .close {
   border-radius: 15px;
+  border: none;
   margin-top: 20px;
   padding: 0.5rem;
-  background-color: rgb(255, 0, 0);
+  background-color: #7a7a7a;
   color: white;
   font-size: 1rem;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #7a7a7a8f;
 }

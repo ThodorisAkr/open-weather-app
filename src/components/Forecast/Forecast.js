@@ -44,7 +44,7 @@ const Forecast = () => {
             <p>{forecast.userId}</p>
           </div>
           <button className={classes.close} onClick={closeForecastHandler}>
-            Close forecast
+            Hide forecast
           </button>
         </div>
       )}
