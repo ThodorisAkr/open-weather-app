@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  margin-top: 10px;
+}
+
+.gridItem {
+  display: flex;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}

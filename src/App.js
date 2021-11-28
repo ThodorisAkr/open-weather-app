@@ -5,8 +5,8 @@ import Forecast from "./components/Forecast/Forecast";
 import useHttp from "./hooks/use-http";
 import LoadingSpinner from "./UI/LoadingSpinner";
 
-const currentWeatherEndpoint = "";
-//"https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=91c7ee372156787b4c3f5d629332d834&units=metric";
+const currentWeatherEndpoint =
+  "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=91c7ee372156787b4c3f5d629332d834&units=metric";
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -29,8 +29,8 @@ function App() {
       <main>
         {error && <p className="error">{error}</p>}
         {isLoading && <LoadingSpinner />}
-        {weather && <CurrentWeather data={weather} />}
-        <Forecast />
+        {weather && <CurrentWeather currentData={weather.current} />}
+        {weather && <Forecast forecastData={weather.daily} />}
       </main>
     </div>
   );

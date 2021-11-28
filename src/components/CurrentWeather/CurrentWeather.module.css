@@ -2,33 +2,17 @@
   padding: 1.5rem 1.5rem 0 1.5rem;
   background-color: white;
   box-shadow: 0 0 10px 0px;
-  font-size: 0.75rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .display:hover {
   background-color: rgba(169, 170, 170, 1);
 }
 
-.grid {
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  margin-top: 10px;
-}
-
-.gridItem {
-  display: flex;
-  height: 3.5rem;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid black;
-}
-
 @media only screen and (min-width: 768px) {
   .display {
     margin: 3rem;
     font-size: 1rem;
-  }
-  .gridItem {
-    height: 100%;
   }
 }
