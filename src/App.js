@@ -8,7 +8,7 @@ import Footer from "./components/UI/Footer/Footer";
 import LineChart from "./components/LineChart/LineChart";
 
 const currentWeatherEndpoint =
-  "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=91c7ee372156787b4c3f5d629332d834&units=metric";
+  "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid={API_KEY}&units=metric";
 
 function App() {
   const [weather, setWeather] = useState(null);
