@@ -38,7 +38,7 @@ const ForecastItem = (props) => {
     <Fragment>
       {modalOpened && (
         <Modal onClose={closeDetailsHandler}>
-          <h2>Weather at {day}</h2>
+          <h2>Weather next {day}</h2>
           <WeatherDetails details={forecast} />
         </Modal>
       )}

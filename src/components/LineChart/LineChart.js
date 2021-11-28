@@ -2,7 +2,6 @@ import { Line } from "react-chartjs-2";
 
 import classes from "./LineChart.module.css";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
 
 const LineChart = (props) => {
   const weatherForecast = props.data;

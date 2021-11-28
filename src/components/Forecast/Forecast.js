@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 import classes from "./Forecast.module.css";
 import ForecastItem from "./ForecastItem";
