@@ -12,9 +12,9 @@ const weekday = [
   "Friday",
   "Saturday",
 ];
-//temperature, feels like, pressure, humidity, wind speed & wind deg, clouds and a weather icon
 
 const ForecastItem = (props) => {
+  //use State to show/hide modal conditionally
   const [modalOpened, setModalOpened] = useState(false);
   const forecast = props.data;
   const icon = forecast.weather[0].icon;
@@ -23,6 +23,7 @@ const ForecastItem = (props) => {
   const date = new Date(forecast.dt * 1000);
   const day = weekday[date.getDay()];
 
+  //mean temperature of day's max and min temperature
   const meanTemp = ((forecast.temp.max + forecast.temp.min) / 2).toFixed(2);
 
   const openDetailsHandler = () => {

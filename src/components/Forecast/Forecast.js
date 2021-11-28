@@ -10,9 +10,9 @@ const Forecast = (props) => {
   const openForecastHandler = () => {
     setShowButton(false);
 
+    //filter the days so the current day doesn't appear in the forecast
     const today = new Date().getDate();
 
-    //filter the days so the current day doesn't appear in the forecast
     const filteredDays = props.forecastData.filter((day) => {
       return new Date(day.dt * 1000).getDate() !== today;
     });

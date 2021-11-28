@@ -5,6 +5,8 @@ const WeatherDetails = (props) => {
   let temperature = 0;
   let feeling = 0;
 
+  //To use this component in two different situations(current / daily forecast)
+  //We need to check for day and feels_like object and act accordingly
   if (weather.temp.day) {
     temperature = ((weather.temp.day + weather.temp.night) / 2).toFixed(2);
   } else {
