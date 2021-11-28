@@ -11,6 +11,8 @@ pressed, outputting a Modal with the corresponding day's details(like in current
 Line Chart: The Line Chart is placed last. Made with react-chartjs-2 package, it outputs a (line) chart witch shows the Max
 temperature for each day of the upcoming seven.
 
+To limit API calls to 60 per minute, I used bottleneck package to execute 1 request per second.
+
 # Installation Process
 **To be able to run it you will need NodeJS installed**
 
@@ -19,7 +21,6 @@ currentWeatherEndpoint, change the {API_KEY} with your key. Finally, run npm sta
 
 
 
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
