@@ -6,6 +6,7 @@
 
 .gridItem {
   display: flex;
+  padding: 1rem 0;
   height: 3.5rem;
   align-items: center;
   justify-content: space-between;
