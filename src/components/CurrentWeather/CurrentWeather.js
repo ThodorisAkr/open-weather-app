@@ -12,7 +12,7 @@ const CurrentWeather = (props) => {
           <img src={iconURL} alt="weather icon" />
           <div>
             <p>{currWeather.temp} °</p>
-            <p>Feels Like: {currWeather.feels_like}</p>
+            <p>RealFeel: {currWeather.feels_like}°</p>
           </div>
         </div>
         <div className={classes.gridItem}>

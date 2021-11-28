@@ -1,45 +1,37 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import CurrentWeather from "./components/CurrentWeather";
+import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
+import Forecast from "./components/Forecast/Forecast";
+import useHttp from "./hooks/use-http";
+import LoadingSpinner from "./UI/LoadingSpinner";
 
-const currentWeatherEndpoint =
-  "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=11b0499bd13ab56063de7565a440eb97&units=metric";
+const currentWeatherEndpoint = "";
+//"https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=91c7ee372156787b4c3f5d629332d834&units=metric";
 
 function App() {
   const [weather, setWeather] = useState(null);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
 
+  //Using a custom hook to make the get request and handle error and loading state
+  const { isLoading, error, sendRequest: fetchWeather } = useHttp();
+
+  //Fetch data on component load and set weather state
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const res = await fetch(currentWeatherEndpoint);
-
-      if (!res.ok) throw new Error("Something went wrong!");
-
-      const data = await res.json();
-
-      setLoading(false);
-
-      setWeather(data);
+    const fetchData = (weatherObj) => {
+      setWeather(weatherObj);
     };
 
-    fetchData().catch((error) => {
-      setLoading(false);
-      setError(error.message);
-    });
-  }, []);
+    fetchWeather(currentWeatherEndpoint, fetchData);
+  }, [fetchWeather]);
 
   return (
     <div className="App">
+      <div className="background"></div>
       <h1>Open Weather</h1>
       <main>
-        {error && <p>{error}</p>}
-        {loading && <p>Loading...</p>}
+        {error && <p className="error">{error}</p>}
+        {isLoading && <LoadingSpinner />}
         {weather && <CurrentWeather data={weather} />}
-        <p style={{ marginTop: "1rem", paddingTop: "1.5rem" }}>
-          Seven Day Forecast
-        </p>
+        <Forecast />
       </main>
     </div>
   );

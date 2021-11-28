@@ -1,3 +1,11 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 h1 {
   color: white;
   padding: 10px;
@@ -6,29 +14,33 @@ h1 {
   font-size: 2.5rem;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.error {
+  color: #d8000c;
+  background-color: #ffbaba;
+  background-image: url("https://i.imgur.com/GnyDvKN.png");
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
-
   background-image: url("./media/mobile-bg.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-
-  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
-  .App {
+  .background {
     background-image: url("./media/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   main {
-    display: flex;
-    flex-direction: row;
   }
 }
 
