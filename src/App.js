@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import React from "react";
+
 import "./App.css";
 import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import Forecast from "./components/Forecast/Forecast";
@@ -33,8 +35,8 @@ function App() {
         {isLoading && <LoadingSpinner />}
         {weather && <CurrentWeather currentData={weather.current} />}
         {weather && <Forecast forecastData={weather.daily} />}
+        {weather && <LineChart data={weather.daily} />}
       </main>
-      {weather && <LineChart data={weather.daily} />}
       {weather && <Footer />}
     </div>
   );
