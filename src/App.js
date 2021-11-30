@@ -9,8 +9,8 @@ import LoadingSpinner from "./components/UI/LoadingSpinner/LoadingSpinner";
 import Footer from "./components/UI/Footer/Footer";
 import LineChart from "./components/LineChart/LineChart";
 
-const currentWeatherEndpoint =
-  "https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid={API_KEY}&units=metric";
+const API_KEY = "";
+const currentWeatherEndpoint = `https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=${API_KEY}&units=metric`;
 
 function App() {
   const [weather, setWeather] = useState(null);
