@@ -17,7 +17,8 @@
   border: 1px solid black;
 }
 
-.open_forecast:hover {
+.open_forecast:hover,
+.open_forecast:active {
   background-color: #1f1f1f;
   color: white;
   cursor: pointer;
@@ -45,7 +46,8 @@
   font-size: 1rem;
 }
 
-.close:hover {
+.close:hover,
+.close:active {
   cursor: pointer;
   background-color: #7a7a7a8f;
 }

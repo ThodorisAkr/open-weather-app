@@ -6,7 +6,7 @@ var Bottleneck = require("bottleneck/es5");
 //(1 max concurrent calls every 1000 ms)
 const limiter = new Bottleneck({
   maxConcurrent: 1,
-  minTime: 1000,
+  minTime: 4000,
 });
 
 const useHttp = () => {
@@ -22,6 +22,7 @@ const useHttp = () => {
 
     try {
       const response = await limiter.schedule(() => fetch(requestURL)); //Here our fetch requests are limited to 1/s
+      console.log("fetching");
       if (!response.ok) throw new Error("Request failed!");
       const data = await response.json();
 
