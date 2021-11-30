@@ -1,6 +1,6 @@
 # Open Weather App - React JS
 
-This app is using the Open Weather API to fetch data for the current weather, as well as forecast for the 7 upcoming days.
+This app is using the OpenWeatherMap API to fetch data for the current weather, as well as forecast for the 7 upcoming days.
 On load, it renders the current weather, a 7-day Forecast button and a Line Chart.
 
 Current Weather: The current weather includes information about temperature, feeling, pressure, humidity, wind speed & wind deg, cloudiness and a weather icon given by Weather API.
