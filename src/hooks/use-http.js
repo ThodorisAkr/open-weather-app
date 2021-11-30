@@ -22,7 +22,6 @@ const useHttp = () => {
 
     try {
       const response = await limiter.schedule(() => fetch(requestURL)); //Here our fetch requests are limited to 1/s
-      console.log("fetching");
       if (!response.ok) throw new Error("Request failed!");
       const data = await response.json();
 

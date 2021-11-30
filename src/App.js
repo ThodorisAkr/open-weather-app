@@ -9,7 +9,7 @@ import LoadingSpinner from "./components/UI/LoadingSpinner/LoadingSpinner";
 import Footer from "./components/UI/Footer/Footer";
 import LineChart from "./components/LineChart/LineChart";
 
-const API_KEY = "065a2289b71f08159bb653efd7f9a31f";
+const API_KEY = "";
 const currentWeatherEndpoint = `https://api.openweathermap.org/data/2.5/onecall?lat=40.58725980318928&lon=22.948223362612612&exclude=hourly,minutely&appid=${API_KEY}&units=metric`;
 
 function App() {
@@ -18,13 +18,30 @@ function App() {
   //Using a custom hook to make the get request and handle error and loading state
   const { isLoading, error, sendRequest: fetchWeather } = useHttp();
 
-  //Fetch data on component load and set weather state
+  //Fetch data on component Load and set the Weather state.
+  //On the first load the fetch happens normally. Then the data is stored in
+  //local storage as a string. If we try to reload before 1 sec passes then
+  //the data that is used in the state is that of the local storage.
   useEffect(() => {
     const fetchData = (weatherObj) => {
       setWeather(weatherObj);
+      const weatherLocalData = JSON.stringify(weatherObj);
+      localStorage.setItem("weatherData", weatherLocalData);
+      localStorage.setItem("time", new Date().getTime() + 1000);
     };
 
-    fetchWeather(currentWeatherEndpoint, fetchData);
+    if (
+      !localStorage.getItem("weatherData") ||
+      localStorage.getItem("time") < new Date().getTime()
+    ) {
+      localStorage.removeItem("time");
+      localStorage.removeItem("weatherData");
+      fetchWeather(currentWeatherEndpoint, fetchData);
+    } else {
+      const weatherLocalData = localStorage.getItem("weatherData");
+      const parsedData = JSON.parse(weatherLocalData);
+      setWeather(parsedData);
+    }
   }, [fetchWeather]);
 
   return (
