@@ -3,7 +3,8 @@
 This app is using the OpenWeatherMap API to fetch data for the current weather, as well as forecast for the 7 upcoming days.
 On load, it fetches the data and renders the current weather, a 7-day Forecast button and a Max Temperature Line Chart. More information below:
 
-Current Weather: The current weather includes information about temperature, feeling, pressure, humidity, wind speed & wind deg, cloudiness and a weather icon given by Weather API.
+## Current Weather
+The current weather includes information about temperature, feeling, pressure, humidity, wind speed & wind deg, cloudiness and a weather icon given by Weather API.
 
 ## 7-day Forecast button
 When pressed, a grid of the next seven days is rendered which outputs the name of the day, an icon(similar to the current weather one) and the mean temperature for each of the seven next days. Each grid Item can be 
