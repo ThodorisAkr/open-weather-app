@@ -1,14 +1,14 @@
 # Open Weather App - React JS
 
 This app is using the OpenWeatherMap API to fetch data for the current weather, as well as forecast for the 7 upcoming days.
-On load, it renders the current weather, a 7-day Forecast button and a Line Chart.
+On load, it fetches the data and renders the current weather, a 7-day Forecast button and a Max Temperature Line Chart. More information below:
 
 Current Weather: The current weather includes information about temperature, feeling, pressure, humidity, wind speed & wind deg, cloudiness and a weather icon given by Weather API.
 
 7-day Forecast button: When pressed, a grid of the next seven days is rendered which outputs the name of the day, an icon(similar to the current weather one) and the mean temperature for each of the seven next days. Each grid Item can be 
 pressed, outputting a Modal with the corresponding day's details(like in current weather). The user can click out of the modal to close it. The user can click a "Hide Forecast" button which is placed after the grid to close the 7-day Forecast.
 
-Line Chart: The Line Chart is placed last. Made with react-chartjs-2 package, it outputs a (line) chart witch shows the Max
+Line Chart: The Line Chart is placed last. Made with react-chartjs-2 package, it outputs a (line) chart which shows the Max
 temperature for each day of the upcoming seven.
 
 To limit API calls to 60 per minute, I used bottleneck package to execute 1 request per second.
