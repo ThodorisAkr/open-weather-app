@@ -1,5 +1,7 @@
 # Open Weather App - React JS
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 This app is using the OpenWeatherMap API to fetch data for the current weather, as well as forecast for the 7 upcoming days.
 On load, it fetches the data and renders the current weather, a 7-day Forecast button and a Max Temperature Line Chart. More information below:
 
@@ -26,8 +28,5 @@ To limit API calls to 60 per minute when the page is reloaded, I used Local Stor
 
 To install the app and run it, clone the repository locally and inside the folder run npm install. After that in App.js change the
 API_KEY const with your API key. Finally, run npm start in the folder and open the browser at localhost:3000/
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
