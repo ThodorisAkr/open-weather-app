@@ -25,8 +25,6 @@ const LineChart = (props) => {
       return weekday[new Date(day.dt * 1000).getDay()];
     });
 
-  console.log(filteredDays);
-
   const maxTemp = weatherForecast.map((item) => item.temp.max);
   maxTemp.shift();
   const data = {
