@@ -12,6 +12,7 @@ Line Chart: The Line Chart is placed last. Made with react-chartjs-2 package, it
 temperature for each day of the upcoming seven.
 
 To limit API calls to 60 per minute, I used bottleneck package in the custom hook responsible for http requests, to execute 1 request per second. 
+To limit API calls to 60 per minute when the page is reloaded, I used Local Storage. The first time the page loads, the fetch happens as it is and two local Storage variables are set, one for the data and one for the time untill the next fetch. If we try to reload the page before one second passes, then the data in local Storage is being used to output the weather. When one second passes, if we reload the page it makes the API call again to fetch "new" data.
 
 # Installation Process
 **To be able to run it you will need NodeJS installed**
